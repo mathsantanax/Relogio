@@ -1,1 +1,3 @@
-# Relógio \n\n## constuindo um relogio digital, analogico com timer e cronometro
+# Relógio
+
+## Constuindo um relógio digital, analogico com timer e cronometro

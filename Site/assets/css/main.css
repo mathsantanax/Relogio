@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root{
+    --fundo: #393939;
+    --relogio-principal: RGB(255 255 255 20%);
+    --relogios-secundario: RGB(255 255 255 40%);
+    --color-menu: #b9b9b9;
+}
+
+*{
+    margin: 0;
+    background-color: var(--fundo);
+}
+
+body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Bebas+Neue', sans-serif;
+}
+
+
+/* Definindo a nav inicial */
+.menu{
+    display: flex;
+    height: 82px;
+    width: 100%;
+    justify-content: center;
+}
+
+.paginas{
+    background-color: var(--color-menu);
+    height: 100%;
+    width: 75%;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.elementos{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background: none;
+    padding-inline-start: 0;
+    margin: 50px;
+}
+
+.elementos li{
+    justify-content: center;
+    align-items: center;
+    height: 82px;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    background: none;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    font-size: 25px;
+}
+
+.elementos li:hover{
+    background-color: #3939393b;
+    border-radius: 20px;
+}
+
+.relogio-principal{
+    display: flex;
+    justify-content: center;
+}
