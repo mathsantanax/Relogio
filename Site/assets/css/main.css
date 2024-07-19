@@ -2,7 +2,7 @@
 :root{
     --fundo: #1e1e1e;
     --relogio-principal: #8383835b;
-    --relogios-secundario: RGB(255 255 255 40%);
+    --relogios-secundario: #ffffff3f;
     --color-menu: #b9b9b96b;
     --font-color-nav: #dcdcdc;
 }
@@ -95,6 +95,8 @@ body{
     color: var(--fundo);
 }
 
+/*Setas*/
+
 #seta-esq{
     height: 75px;
 
@@ -130,6 +132,7 @@ body{
     border-radius: 20px;
 }
 
+/*hora e pais*/
 .data-pais{
     display: flex;
     justify-content: center;
@@ -137,4 +140,36 @@ body{
     margin: 10px;
     padding: 40px 0 10px 0;
     color: var(--font-color-nav);
+}
+
+.data-pais h1{
+    background: var(--color-menu);
+    padding: 3.5px;
+    border-radius: 20px;
+}
+
+/* horario dos paises*/
+
+.container-paises{
+    display: flex;
+    flex-direction: row;
+}
+
+.card-paises{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--relogios-secundario);
+    width: 200px;
+    height: 130px;
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.card-paises h2{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    font-size: 50px;
 }
