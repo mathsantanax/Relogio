@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 :root{
     --fundo: ;
-    --relogio-principal: #3939393b;
+    --relogio-principal: #8383835b;
     --relogios-secundario: RGB(255 255 255 40%);
-    --color-menu: #b9b9b9;
+    --color-menu: #b9b9b96b;
 }
 
 *{
@@ -63,22 +63,30 @@ body{
     border-radius: 20px;
 }
 
+.imagem-pais{
+    margin-top: 10px;
+    
+    
+    background-image: url("https://todepassagem.clickbus.com.br/wp-content/uploads/2022/12/brasilia-df-to-de-passagem.jpg");
+}
+
+/* Ajustando os relogios*/
 .relogio-principal{
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: aliceblue;
     justify-content: center;
 }
 
-
 #relogios{
     display: flex;
-    justify-content: center
+    justify-content: center;
+    align-items: center;
 }
 
 #seta-esq{
     height: 75px;
+
 }
 
 #seta-dir{
@@ -86,9 +94,11 @@ body{
 }
 
 .seta{
+    display: flex;
     background: var(--relogio-principal);
+    border-radius: 20px;
+    height: 416px;
     align-items: center;
-    justify-content: center;
 }
 
 .container-relogios{
@@ -103,8 +113,15 @@ body{
     align-items: center;
     height: 416px;
     width: 625px;
-   background: var(--relogio-principal);
-   margin: 38px;
-   border-radius: 20px;
+    background: var(--relogio-principal);
+    margin: 38px;
+    border-radius: 20px;
 }
 
+.data-pais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 40px 0 10px 0;
+}
