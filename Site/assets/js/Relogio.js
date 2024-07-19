@@ -1,18 +1,21 @@
-function getBrasiliaTime() {
-    // Cria um objeto Date com a hora atual em UTC
-    let now = new Date();
+function obterHoraDeBrasilia() {
+    // Obter a data e hora atual no fuso horário de Brasília
+    const dataBrasilia = new Date().toLocaleString('pt-BR', {
+        timeZone: 'America/Sao_Paulo',
+        hour12: false,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    });
 
-    // Converte a hora atual para o fuso horário de Brasília (GMT-3)
-    let brasiliaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Sao_Paulo" }));
-
-    return brasiliaTime;
+    return dataBrasilia;
 }
 
-// Exemplo de uso
-let horaDeBrasilia = getBrasiliaTime();
-console.log(horaDeBrasilia.toString());
+function atualizarHora() {
+    const elementoHora = document.getElementById('horas-Digital');
+    elementoHora.textContent = obterHoraDeBrasilia();
+}
 
+setInterval(atualizarHora, 1000);
 
-document.addEventListener('DOMContentLoaded', function(){
-    getBrasiliaTime()
-});
+atualizarHora();
