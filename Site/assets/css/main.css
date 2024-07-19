@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 :root{
-    --fundo: #393939;
-    --relogio-principal: RGB(255 255 255 20%);
+    --fundo: ;
+    --relogio-principal: #3939393b;
     --relogios-secundario: RGB(255 255 255 40%);
     --color-menu: #b9b9b9;
 }
@@ -66,4 +66,45 @@ body{
 .relogio-principal{
     display: flex;
     justify-content: center;
+    width: 100%;
+    background-color: aliceblue;
+    justify-content: center;
 }
+
+
+#relogios{
+    display: flex;
+    justify-content: center
+}
+
+#seta-esq{
+    height: 75px;
+}
+
+#seta-dir{
+    height: 75px;
+}
+
+.seta{
+    background: var(--relogio-principal);
+    align-items: center;
+    justify-content: center;
+}
+
+.container-relogios{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.rel-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 416px;
+    width: 625px;
+   background: var(--relogio-principal);
+   margin: 38px;
+   border-radius: 20px;
+}
+
