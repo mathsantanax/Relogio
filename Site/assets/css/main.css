@@ -161,7 +161,7 @@ body{
     justify-content: center;
     flex-direction: column;
     background: var(--relogios-secundario);
-    width: 200px !important;
+    width: 200px;
     height: 130px;
     border-radius: 20px;
     margin-left: 10px;
