@@ -1,49 +1,43 @@
-const timeZones = [
-    'America/Sao_Paulo',
-    'America/New_York',
-    'Lisboa/Portugal',
-    'Asia/Tokyo',
-    'Australia/Sydney'
-];
+const Zones = {
+    'America/Sao_Paulo': 'pt-BR',
+    'America/New_York': 'en-US',
+    'Europe/Lisbon': 'pt-PT',
+    'Asia/Tokyo': 'ja-JP',
+    'Australia/Sydney': 'en-US'
+};
 
 const containerPaises = document.querySelector(".container-paises");
 
-
 function criarCard() {
-    if(containerPaises)
-    {
-        for(var i = 0; i < timeZones.length; i++)
-        {
+    for (const [zone, locale] of Object.entries(Zones)) {
+        if (containerPaises) {
             var cardPaises = document.createElement("div");
             cardPaises.className = "card-paises";
-                    
-            if(cardPaises)
-            {
+            cardPaises.setAttribute('data-zone', zone);
+
+            if (cardPaises) {
                 var h3 = document.createElement("h3");
-                var cidadesPaises = timeZones[i].split("/");
-                
-                h3.textContent = cidadesPaises.join(", ").split("_").join(" ");
-                        
+                var cidadesPaises = zone.split("/");
+
+                h3.textContent = cidadesPaises[1].split("_").join(" ");
+
                 var h2 = document.createElement("h2");
-                var hora = ObterHora(timeZones[i]);
-                console.log(hora);
-                h2.textContent = hora;
+                h2.className = "time-display";
+                h2.innerHTML = ObterHora(locale, zone);
 
                 cardPaises.appendChild(h3);
                 cardPaises.appendChild(h2);
             }
-            containerPaises.appendChild(cardPaises)
-        }   
+            containerPaises.appendChild(cardPaises);
+        } else {
+            console.log("Elemento com a classe 'container-paises' não encontrado.");
+        }
     }
-    else {
-        console.log("Elemento com a classe 'container-paises' não encontrado.");
-    }
-
 }
 
-function ObterHora(regiao,string){
-    const Hora = new Date().toLocaleDateString(regiao, {
-        timeZone: string,
+function ObterHora(regiao, pais){
+    const Hora = new Date().toLocaleString(regiao, {
+        timeZone: pais,
         hour12: false,
         hour: '2-digit',
         minute: '2-digit',
@@ -52,27 +46,22 @@ function ObterHora(regiao,string){
     return Hora;
 }
 
-
-function obterHoraDeBrasilia() {
-    const dataBrasilia = new Date().toLocaleString('pt-BR', {
-        timeZone: 'America/Sao_Paulo',
-        hour12: false,
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit'
-    });
-
-    return dataBrasilia;
-}
-
 function atualizarHora() {
     const elementoHora = document.getElementById('horas-Digital');
-    elementoHora.textContent = obterHoraDeBrasilia();
+    if (elementoHora) {
+        elementoHora.textContent = ObterHora(Zones['America/Sao_Paulo'], 'America/Sao_Paulo');
+    }
+
+    document.querySelectorAll('.card-paises').forEach(card => {
+        const zone = card.getAttribute('data-zone');
+        const locale = Zones[zone];
+        const timeDisplay = card.querySelector('.time-display');
+        if (timeDisplay) {
+            timeDisplay.textContent = ObterHora(locale, zone);
+        }
+    });
 }
-    
 
 setInterval(atualizarHora, 1000);
-// criarCard();
+criarCard();
 atualizarHora();
-
-console.log(ObterHora("ja-JP", "Asia/Tokyo"));
