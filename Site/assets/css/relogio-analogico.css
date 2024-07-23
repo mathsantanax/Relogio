@@ -1,0 +1,71 @@
+:root{
+    --fundo: #1e1e1e;
+    --relogio-principal: #8383835b;
+    --relogios-secundario: #ffffff3f;
+    --color-menu: #b9b9b96b;
+    --font-color-nav: #dcdcdc9f;
+}
+
+.card-relogio-analogico {
+    width: 200px;
+    height: 200px;
+    background-color: var(--font-color-nav);
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.numeros {
+    position: absolute;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    font-weight: bold;
+}
+
+.numero {
+    top: 90px;
+    left: 95px;
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i))) translate(0, -88px);
+}
+
+
+.hora, .minuto, .segundo {
+    position: absolute;
+    background-color: var(--fundo);
+    transform-origin: center bottom;
+}
+
+.hora {
+    border-radius: 20px;
+    width: 4px;
+    height: 50px;
+    top: 50px;
+    left: 98px;
+}
+
+.minuto {
+    width: 2px;
+    height: 70px;
+    top: 30px;
+    left: 99px;
+}
+
+.segundo {
+    width: 1px;
+    height: 80px;
+    top: 20px;
+    left: 100px;
+    background-color: red; /* Segunda mão em vermelho */
+}
+
+.center {
+    width: 6px;
+    height: 6px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 97px;
+    left: 97px;
+}

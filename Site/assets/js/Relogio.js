@@ -7,6 +7,10 @@ const Zones = {
 };
 
 const containerPaises = document.querySelector(".container-paises");
+const relogioAnalogico = document.querySelector(".card-relogio-analogico");
+const seletorHora = document.querySelector(".hora");
+const seletorMinuto = document.querySelector(".minuto");
+const seletorSegundo = document.querySelector(".segundo");
 
 function criarCard() {
     for (const [zone, locale] of Object.entries(Zones)) {
