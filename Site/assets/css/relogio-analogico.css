@@ -4,12 +4,13 @@
     --relogios-secundario: #ffffff3f;
     --color-menu: #b9b9b96b;
     --font-color-nav: #dcdcdc9f;
+    --relogio-analogico: #3d3d3da4;
 }
 
 .card-relogio-analogico {
     width: 200px;
     height: 200px;
-    background-color: var(--font-color-nav);
+    background-color: var(--relogio-analogico);
     border-radius: 50%;
     position: relative;
     margin: 0 auto;
