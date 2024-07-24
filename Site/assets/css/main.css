@@ -113,6 +113,13 @@ body{
     border-radius: 20px;
     height: 416px;
     align-items: center;
+    transition: .2s ease-in-out;
+}
+
+.seta:hover{
+    background-color: #3939393b;
+    border-radius: 20px;
+    color: var(--fundo);
 }
 
 .container-relogios{

@@ -13,6 +13,17 @@ const seletorHora = document.querySelector(".hora");
 const seletorMinuto = document.querySelector(".minuto");
 const seletorSegundo = document.querySelector(".segundo");
 
+const setaDireita = document.getElementById('seta-direita');
+const setaEsquerda = document.getElementById('seta-esquerda'); 
+
+const cidadePais = document.getElementById('cidade-pais');
+const horasDigital = document.getElementById('horas-digital');
+const dataAtual = document.getElementById('data-atual');
+
+let indiceRelogioAtual = 0;
+const zonas = Object.keys(Zones);
+
+// cria os cards de horas em baixo
 function criarCard() {
     for (const [zone, locale] of Object.entries(Zones)) {
         if (containerPaises) {
@@ -40,6 +51,7 @@ function criarCard() {
     }
 }
 
+// pegar hora passando os parametros
 function ObterHora(regiao, pais){
     const Hora = new Date().toLocaleString(regiao, {
         timeZone: pais,
@@ -50,6 +62,8 @@ function ObterHora(regiao, pais){
     });
     return Hora;
 }
+
+// função para o relogio analogico funcionar
 
 function AtualizarRelogioAnalogico(regiao, pais) {
   
@@ -73,24 +87,37 @@ function AtualizarRelogioAnalogico(regiao, pais) {
     seletorSegundo.style.transition = 'transform 0.1s ease-in-out';
   }
   
+// função para atualizar a hora sempre
+  function atualizarHora() {
+    const zonaAtual = zonas[indiceRelogioAtual];
+    const regiaoAtual = Zones[zonaAtual];
+    const cidadesPaises = zonaAtual.split("/");
 
-function atualizarHora() {
-    const elementoHora = document.getElementById('horas-Digital');
-    if (elementoHora) {
-        elementoHora.textContent = ObterHora(Zones['America/Sao_Paulo'], 'America/Sao_Paulo');
-    }
+    horasDigital.textContent = ObterHora(regiaoAtual, zonaAtual);
+    AtualizarRelogioAnalogico(regiaoAtual, zonaAtual);
+
+    cidadePais.textContent = `${cidadesPaises[1].split("_").join(" ")}, ${cidadesPaises[0]}`;
+    dataAtual.textContent = new Date().toLocaleDateString('pt-BR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
     document.querySelectorAll('.card-paises').forEach(card => {
-        const zone = card.getAttribute('data-zone');
-        const locale = Zones[zone];
-        const timeDisplay = card.querySelector('.time-display');
-        if (timeDisplay) {
-            timeDisplay.textContent = ObterHora(locale, zone);
-        }
-    });
-    AtualizarRelogioAnalogico('pt-BR', 'America/Sao_Paulo');
+                 const zone = card.getAttribute('data-zone');
+                 const locale = Zones[zone];
+                 const timeDisplay = card.querySelector('.time-display');
+                 if (timeDisplay) {
+                     timeDisplay.textContent = ObterHora(locale, zone);
+                 }
+             });
 }
 
-setInterval(atualizarHora, 1000);
-criarCard();
-atualizarHora();
+// funcionamento das setas
+function mudarRelogio(direcao) {
+    indiceRelogioAtual = (indiceRelogioAtual + direcao + zonas.length) % zonas.length;
+    atualizarHora();
+}
+
+setaEsquerda.addEventListener('click', () => mudarRelogio(-1));
+setaDireita.addEventListener('click', () => mudarRelogio(1));
+
+setInterval(atualizarHora, 1000); // atualiza a cada 1 segundo
+criarCard(); // cria os card de paises em baixo 
+atualizarHora(); // atualiza a hora assim que abre o site
