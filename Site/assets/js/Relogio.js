@@ -6,6 +6,14 @@ const Zones = {
     'Australia/Sydney': 'en-US'
 };
 
+const imagensPaises = {
+    'America/Sao_Paulo': 'assets/img/sao_paulo.jpg',
+    'America/New_York': 'assets/img/new_york.jpg',
+    'Europe/Lisbon': 'assets/img/sydney.jpg',
+    'Asia/Tokyo': 'assets/img/tokyo.jpg',
+    'Australia/Sydney': 'assets/img/sydney.jpg'
+}
+
 const containerPaises = document.querySelector(".container-paises");
 
 const relogioAnalogico = document.querySelector(".card-relogio-analogico");
@@ -63,6 +71,7 @@ function ObterHora(regiao, pais){
     return Hora;
 }
 
+
 // função para o relogio analogico funcionar
 
 function AtualizarRelogioAnalogico(regiao, pais) {
@@ -107,6 +116,11 @@ function AtualizarRelogioAnalogico(regiao, pais) {
                      timeDisplay.textContent = ObterHora(locale, zone);
                  }
              });
+
+    const imageUrl = imagensPaises[zonaAtual];
+    if(imageUrl){
+        document.querySelector('.imagem-pais').style.backgroundImage = `url(${imageUrl})`;
+    }
 }
 
 // funcionamento das setas

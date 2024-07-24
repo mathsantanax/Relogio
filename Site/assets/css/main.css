@@ -71,9 +71,8 @@ body{
 
 .imagem-pais{
     margin-top: 10px;
-    
-    
-    background-image: url("https://todepassagem.clickbus.com.br/wp-content/uploads/2022/12/brasilia-df-to-de-passagem.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Ajustando os relogios*/
@@ -181,4 +180,11 @@ body{
     justify-content: center;
     margin: 10px;
     font-size: 50px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
 }
