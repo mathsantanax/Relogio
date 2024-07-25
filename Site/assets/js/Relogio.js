@@ -120,6 +120,7 @@ function AtualizarRelogioAnalogico(regiao, pais) {
     const imageUrl = imagensPaises[zonaAtual];
     if(imageUrl){
         document.querySelector('.imagem-pais').style.backgroundImage = `url(${imageUrl})`;
+        document.querySelector('.imagem-pais').style.transition = '.2s ease-in-out';
     }
 }
 
