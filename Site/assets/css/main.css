@@ -65,6 +65,11 @@ body{
     color: var(--fundo);
 }
 
+.elementos a{
+    text-decoration: none;
+    color: var(--fundo);
+}
+
 .nav-item{
     color: var(--font-color-nav);
 }
@@ -72,7 +77,7 @@ body{
 .imagem-pais{
     margin-top: 10px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 
 /* Ajustando os relogios*/
