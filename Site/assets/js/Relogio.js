@@ -3,7 +3,9 @@ const Zones = {
     'America/New_York': 'en-US',
     'Europe/Lisbon': 'pt-PT',
     'Asia/Tokyo': 'ja-JP',
-    'Australia/Sydney': 'en-US'
+    'Australia/Sydney': 'en-US',
+    'Europe/Athens': 'el-GR',
+    'Europe/Zurich': 'de-CH'
 };
 
 const imagensPaises = {
@@ -11,7 +13,9 @@ const imagensPaises = {
     'America/New_York': 'assets/img/new_york.jpg',
     'Europe/Lisbon': 'assets/img/lisbon.jpg',
     'Asia/Tokyo': 'assets/img/tokyo.jpg',
-    'Australia/Sydney': 'assets/img/sydney.jpg'
+    'Australia/Sydney': 'assets/img/sydney.jpg',
+    'Europe/Athens': 'assets/img/grecia.jpg',
+    'Europe/Zurich': 'assets/img/suica.jpg'
 }
 
 const containerPaises = document.querySelector(".container-paises");
