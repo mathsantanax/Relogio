@@ -30,17 +30,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            console.log("jQuery está carregado e pronto");
-
             function loadPage(page) {
-                console.log("Carregando página: " + page);
-                $('#content').load(page, function(response, status, xhr) {
-                    if (status == "error") {
-                        console.log("Erro ao carregar a página: " + xhr.status + " " + xhr.statusText);
-                    } else {
-                        console.log("Página carregada com sucesso: " + page);
-                    }
-                });
+                $('#content').load(page);
             }
 
             // Carregar a página inicial ao carregar o site
@@ -53,5 +44,6 @@
             });
         });
     </script>
+    <script src="assets/js/Relogio.js"></script>
 </body>
 </html>
