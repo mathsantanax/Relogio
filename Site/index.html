@@ -27,23 +27,7 @@
     <footer>
         <h5>Created by Matheus Santana</h5>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            function loadPage(page) {
-                $('#content').load(page);
-            }
-
-            // Carregar a página inicial ao carregar o site
-            loadPage('view/Home.html');
-
-            $('.nav-link').on('click', function(event) {
-                event.preventDefault();
-                var page = $(this).data('page');
-                loadPage(page);
-            });
-        });
-    </script>
-    <script src="assets/js/Relogio.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/nav-menu.js"></script>
 </body>
 </html>

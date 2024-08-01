@@ -6,7 +6,6 @@ const Zones = {
     'Australia/Sydney': 'en-US',
     'Europe/Athens': 'el-GR',
     'Europe/Zurich': 'de-CH',
-    'America/Brasilia': 'pt-BR'
 };
 
 const imagensPaises = {
