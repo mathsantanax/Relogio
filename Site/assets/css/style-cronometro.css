@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root{
+    --fundo: #1e1e1e;
+    --relogio-principal: #8383835b;
+    --relogios-secundario: #ffffff3f;
+    --color-menu: #b9b9b96b;
+    --font-color-nav: #dcdcdc;
+}
+
+.container-cronometro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 0 50px 0;
+}
+
+.container-cronometro h1{
+    width: 100%;
+    height: 75%;
+    color: gainsboro;
+    font-size: 150px;
+    margin-bottom: 50px;
+}
+
+.buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.btn{
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    background-color: var(--relogio-principal);
+    color: white;
+    border: none;
+    padding: 0.5rem 2rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover{
+    background-color: var(--font-color-nav);
+    color: var(--fundo);
+}
