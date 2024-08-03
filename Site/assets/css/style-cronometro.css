@@ -23,6 +23,12 @@
     margin-bottom: 50px;
 }
 
+.container-cronometro h2{
+    color: grey;
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+
 .buttons{
     display: flex;
     width: 100%;
@@ -45,4 +51,9 @@
 .btn:hover{
     background-color: var(--font-color-nav);
     color: var(--fundo);
+}
+
+.timer-display{
+    display: flex;
+    align-items: center;
 }

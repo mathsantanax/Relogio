@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio</title>
+
+    <!-- Links stylesheet da pagina inicial -->
+     <link rel="stylesheet" href="../assets/css/main.css">
+     <link rel="stylesheet" href="../assets/css/relogio-analogico.css">
+     <link rel="stylesheet" href="../assets/css/relogio-digital.css">
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <div class="paginas">
+                <ul class="elementos">
+                    <li class="nav-item"><a href="../view/index.html">Relógio Mundial</a></li>
+                    <li class="nav-item"><a href="../view/Cronometro.html">Cronômetro</a></li>
+                    <li class="nav-item"><a href="../view/Temporizador.html">Temporizador</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="imagem-pais">
+                <div class="data-pais">
+                    <h1 id="cidade-pais">Brasília, Brasil</h1>
+                </div>
+                <div class="relogio-principal">
+                    <div id="relogios">
+                        <div class="seta" id="seta-esquerda"><img id="seta-esq" src="../assets/img/left-chevron.png" alt="seta-esquerda"></div>
+                        <div class="container-relogios">
+                            <div id="relogio-digital" class="rel-container">
+                                <h1 id="horas-digital"></h1>
+                            </div>
+                            <div id="relogio-analogico" class="rel-container">
+                                <div class="card-relogio-analogico">
+                                    <div class="hora" id="hour"></div>
+                                    <div class="minuto" id="minute"></div>
+                                    <div class="segundo" id="second"></div>
+                                    <div class="center"></div>
+                                    <div class="numeros">
+                                        <div class="numero" style="--i:1;">1</div>
+                                        <div class="numero" style="--i:2;">2</div>
+                                        <div class="numero" style="--i:3;">3</div>
+                                        <div class="numero" style="--i:4;">4</div>
+                                        <div class="numero" style="--i:5;">5</div>
+                                        <div class="numero" style="--i:6;">6</div>
+                                        <div class="numero" style="--i:7;">7</div>
+                                        <div class="numero" style="--i:8;">8</div>
+                                        <div class="numero" style="--i:9;">9</div>
+                                        <div class="numero" style="--i:10;">10</div>
+                                        <div class="numero" style="--i:11;">11</div>
+                                        <div class="numero" style="--i:12;">12</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="seta" id="seta-direita"><img id="seta-dir" src="../assets/img/right-chevron.png" alt="seta-direita"></div>
+                    </div>
+                </div>
+                <div class="data-pais"><h1 id="data-atual"></h1></div>
+            </div>
+        </section>
+        <section>
+            <div class="container-paises">
+            </div>
+        </section>
+        <script src="../assets/js/Relogio.js"></script>
+    </main>
+    <footer>
+        <h5>Created by Matheus Santana</h5>
+    </footer>
+</body>
+</html>

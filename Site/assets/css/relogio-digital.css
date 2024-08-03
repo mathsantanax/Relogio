@@ -1,0 +1,106 @@
+/* Ajustando os relogios*/
+.relogio-principal{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    justify-content: center;
+}
+
+#relogios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#relogio-digital h1{
+    font-size: 120px;
+    color: var(--fundo);
+}
+
+/*Setas*/
+
+#seta-esq{
+    height: 75px;
+
+}
+
+#seta-dir{
+    height: 75px;
+}
+
+.seta{
+    cursor: pointer;
+    display: flex;
+    background: var(--relogio-principal);
+    border-radius: 20px;
+    height: 416px;
+    align-items: center;
+    transition: .2s ease-in-out;
+}
+
+.seta:hover{
+    background-color: #3939393b;
+    border-radius: 20px;
+    color: var(--fundo);
+}
+
+.container-relogios{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.rel-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 416px;
+    width: 625px;
+    background: var(--relogio-principal);
+    margin: 38px;
+    border-radius: 20px;
+}
+
+/*hora e pais*/
+.data-pais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 40px 0 10px 0;
+    color: var(--font-color-nav);
+}
+
+.data-pais h1{
+    background: var(--color-menu);
+    padding: 3.5px;
+    border-radius: 20px;
+}
+
+/* horario dos paises*/
+
+.container-paises{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.card-paises{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--relogios-secundario);
+    width: 200px;
+    height: 130px;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.card-paises h2{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    font-size: 50px;
+}

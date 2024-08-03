@@ -1,18 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="./assets/css/style-cronometro.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio</title>
+
+    <!-- Links stylesheet da pagina inicial -->
+     <link rel="stylesheet" href="../assets/css/main.css">
+     <link rel="stylesheet" href="../assets/css/style-cronometro.css">
 </head>
-
-<section>
-    <div class="container-cronometro">
-        <div class="timer-display" id="timer">
-            <h1>00:00:00</h1>
+<body>
+    <header>
+        <div class="menu">
+            <div class="paginas">
+                <ul class="elementos">
+                    <li class="nav-item"><a href="../view/index.html">Relógio Mundial</a></li>
+                    <li class="nav-item"><a href="../view/Cronometro.html">Cronômetro</a></li>
+                    <li class="nav-item"><a href="../view/Temporizador.html">Temporizador</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="buttons">
-            <button id="start" class="btn">Iniciar</button>
-            <button id="pause" class="btn">Pausar</button>
-            <button id="reset" class="btn">Resetar</button>
-        </div>
-    </div>
-</section>
-
-<script src="../assets/js/cronometro.js"></script>
+    </header>
+    <main>
+        <section>
+            <div class="container-cronometro">
+                <div class="timer-display">
+                    <h1 id="hour">00</h1>
+                    <h1>:</h1>
+                    <h1 id="min">00</h1>
+                    <h1>:</h1>
+                    <h1 id="sec">00</h1>
+                    <h2>:</h2>
+                    <h2 id="mil">000</h2>
+                </div>
+                <div class="buttons">
+                    <button id="start" class="btn">Iniciar</button>
+                    <button id="pause" class="btn">Pausar</button>
+                    <button id="reset" class="btn">Resetar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h5>Created by Matheus Santana</h5>
+    </footer>
+    <script src="../assets/js/cronometro.js"></script>
+</body>
+</html>
