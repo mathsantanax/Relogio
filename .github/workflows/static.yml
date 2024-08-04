@@ -41,9 +41,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-        - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
         with:
-        # Upload entire Site directory
-        path: './Site'
+          path: './Site'
