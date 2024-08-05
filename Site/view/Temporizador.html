@@ -7,7 +7,7 @@
 
     <!-- Links stylesheet da pagina inicial -->
      <link rel="stylesheet" href="../assets/css/main.css">
-     <link rel="stylesheet" href="../assets/css/style-cronometro.css">
+     <link rel="stylesheet" href="../assets/css/style-temp.css">
 </head>
 <body>
     <header>
@@ -21,10 +21,31 @@
             </div>
         </div>
     </header>
-        <h1>hi</h1>
+    <main>
+        <section>
+            <div class="inputs-temp">
+                <input type="number" id="horas" placeholder="HH" min="0" max="23">
+                <input type="number" id="minutos" placeholder="MM" min="0" max="59">
+                <input type="number" id="segundos" placeholder="SS" min="0" max="59">
+            </div>
+            <div class="display-temp">
+                <h1 id="hora">00</h1>
+                <h1>:</h1>
+                <h1 id="minuto">00</h1>
+                <h1>:</h1>
+                <h1 id="segundo">00</h1>
+                <h2>:</h2>
+                <h2 id="millezimo">000</h2>
+            </div>
+            <div class="butoes">
+                <button id="start" class="btn">Iniciar</button>
+                <button id="reset" class="btn">Resetar</button>
+            </div>
+        </section>
+    </main>
     <footer>
         <h5>Created by Matheus Santana</h5>
     </footer>
-    <script src="../assets/js/cronometro.js"></script>
+    <script src="../assets/js/temporizador.js"></script>
 </body>
 </html>
