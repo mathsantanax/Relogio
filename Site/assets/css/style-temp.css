@@ -1,10 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root{
+    --fundo: #1e1e1e;
+    --relogio-principal: #8383835b;
+    --relogios-secundario: #ffffff3f;
+    --color-menu: #b9b9b96b;
+    --font-color-nav: #dcdcdc;
+}
+
 section{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin-top: 10%;
 }
 
 .display-temp{
     display: flex;
+    align-items: center;
+    margin: 50px 0 50px 0;
 }
+
+.display-temp h1{
+    color: var(--font-color-nav);
+    font-size: 150px;
+}
+
+.display-temp h2{
+    margin-top: 25px;
+    font-size: 100px;
+}
+
