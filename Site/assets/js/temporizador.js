@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const horasInput = document.getElementById('horas');
     const minutosInput = document.getElementById('minutos');
     const segundosInput = document.getElementById('segundos');
+    const inputTemp = document.querySelector('.inputs-temp');
 
     const startPause = document.getElementById('start-pause');
     const resetar = document.getElementById('reset');
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tempoInicial = horas * 3600000 + minutos * 60000 + segundos * 1000;
         tempoRestante = tempoInicial;
         atualizarDisplay(tempoRestante);
+        esconderInputs()
 
         if (tempoRestante > 0) {
             ativo = true;
@@ -74,6 +76,15 @@ document.addEventListener('DOMContentLoaded', () => {
         minutosInput.value = '';
         segundosInput.value = '';
         startPause.textContent = 'Iniciar';
+        esconderInputs()
+    }
+
+    function esconderInputs() {
+        if (inputTemp.style.display === 'none') {
+            inputTemp.style.display = 'flex';
+        } else {
+            inputTemp.style.display = 'none';
+        }
     }
 
     startPause.addEventListener('click', alternarIniciarPausar);

@@ -17,6 +17,19 @@ section{
     margin-top: 10%;
 }
 
+.inputs{
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    border-style: none;
+    background-color: var(--relogio-principal);
+    color: white;
+    text-align: center;
+}
+
 .display-temp{
     display: flex;
     align-items: center;
@@ -33,3 +46,28 @@ section{
     font-size: 100px;
 }
 
+.botoes, .inputs-temp{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+
+    transform: 0.2s ease;
+}
+
+.btn{
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    background-color: var(--relogio-principal);
+    color: white;
+    border: none;
+    padding: 0.5rem 2rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover{
+    background-color: var(--font-color-nav);
+    color: var(--fundo);
+}

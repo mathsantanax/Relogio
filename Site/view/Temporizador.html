@@ -14,9 +14,9 @@
         <div class="menu">
             <div class="paginas">
                 <ul class="elementos">
-                    <li class="nav-item"><a href="../view/index.html">Relógio Mundial</a></li>
-                    <li class="nav-item"><a href="../view/Cronometro.html">Cronômetro</a></li>
-                    <li class="nav-item"><a href="../view/Temporizador.html">Temporizador</a></li>
+                    <li class="nav-item"><a href="index.html">Relógio Mundial</a></li>
+                    <li class="nav-item"><a href="Cronometro.html">Cronômetro</a></li>
+                    <li class="nav-item"><a href="Temporizador.html">Temporizador</a></li>
                 </ul>
             </div>
         </div>
@@ -24,9 +24,9 @@
     <main>
         <section>
             <div class="inputs-temp">
-                <input type="number" id="horas" placeholder="HH" min="0" max="23">
-                <input type="number" id="minutos" placeholder="MM" min="0" max="59">
-                <input type="number" id="segundos" placeholder="SS" min="0" max="59">
+                <input class="inputs" type="number" id="horas" placeholder="Horas" min="0" max="23">
+                <input class="inputs" type="number" id="minutos" placeholder="Minutos" min="0" max="59">
+                <input class="inputs" type="number" id="segundos" placeholder="Segundos" min="0" max="59">
             </div>
             <div class="display-temp">
                 <h1 id="hora">00</h1>
@@ -37,7 +37,7 @@
                 <h2>:</h2>
                 <h2 id="milezimo">000</h2>
             </div>
-            <div class="butoes">
+            <div class="botoes">
                 <button id="start-pause" class="btn">Iniciar</button>
                 <button id="reset" class="btn">Resetar</button>
             </div>
