@@ -1,54 +1,69 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const startBtn = document.getElementById('start');
-    const pauseBtn = document.getElementById('pause');
-    const resetBtn = document.getElementById('reset');
+    const horasInput = document.getElementById('horas');
+    const minutosInput = document.getElementById('minutos');
+    const segundosInput = document.getElementById('segundos');
 
-    const hour = document.getElementById('hour');
-    const min = document.getElementById('min');
-    const sec = document.getElementById('sec');
-    const mil = document.getElementById('mil');
+    const iniciar = document.getElementById('start');
+    const resetar = document.getElementById('reset');
+    const pausar = document.getElementById('pause'); // Botão de pausa
 
-    let startTime;
-    let updatedTime;
-    let difference;
-    let timerInterval;
-    let running = false;
+    const hora = document.getElementById('hora');
+    const minuto = document.getElementById('minuto');
+    const segundo = document.getElementById('segundo');
+    const milezimo = document.getElementById('milezimo');
 
-    function updateTimer() {
-        updatedTime = new Date().getTime();
-        difference = updatedTime - startTime;
+    let ativo = false;
+    let timer;
+    let tempoRestante;
 
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-        const miliseconds = Math.floor((difference % 1000));
-
-        hour.textContent = `${String(hours).padStart(2, '0')}`;
-        min.textContent = `${String(minutes).padStart(2, '0')}`;
-        sec.textContent = `${String(seconds).padStart(2, '0')}`;
-        mil.textContent = `${String(miliseconds).padStart(2, '0')}`;
+    function atualizarDisplay(tempo) {
+        const horas = Math.floor(tempo / 3600);
+        const minutos = Math.floor((tempo % 3600) / 60);
+        const segundos = tempo % 60;
+        hora.textContent = `${String(horas).padStart(2, '0')}`;
+        minuto.textContent = `${String(minutos).padStart(2, '0')}`;
+        segundo.textContent = `${String(segundos).padStart(2, '0')}`;
     }
 
-    startBtn.addEventListener('click', () => {
-        if (!running) {
-            startTime = new Date().getTime() - (difference || 0);
-            timerInterval = setInterval(updateTimer, 10);
-            running = true;
+    function comecar() {
+        if (!ativo) {
+            const horas = parseInt(horasInput.value) || 0;
+            const minutos = parseInt(minutosInput.value) || 0;
+            const segundos = parseInt(segundosInput.value) || 0;
+            tempoRestante = horas * 3600 + minutos * 60 + segundos;
+            atualizarDisplay(tempoRestante);
+
+            if (tempoRestante > 0) {
+                ativo = true;
+                timer = setInterval(() => {
+                    if (tempoRestante > 0) {
+                        tempoRestante--;
+                        atualizarDisplay(tempoRestante);
+                    } else {
+                        clearInterval(timer);
+                        ativo = false;
+                    }
+                }, 1000);
+            }
         }
-    });
+    }
 
-    pauseBtn.addEventListener('click', () => {
-        clearInterval(timerInterval);
-        running = false;
-    });
+    function pausarTimer() {
+        clearInterval(timer);
+        ativo = false;
+    }
 
-    resetBtn.addEventListener('click', () => {
-        clearInterval(timerInterval);
-        running = false;
-        difference = 0;
-        hour.textContent = "00";
-        min.textContent = "00";
-        sec.textContent = "00";
-        mil.textContent = "000";
-    });
+    function resetarTimer() {
+        clearInterval(timer);
+        ativo = false;
+        tempoRestante = 0;
+        atualizarDisplay(tempoRestante);
+        horasInput.value = '';
+        minutosInput.value = '';
+        segundosInput.value = '';
+    }
+
+    iniciar.addEventListener('click', comecar);
+    pausar.addEventListener('click', pausarTimer);
+    resetar.addEventListener('click', resetarTimer);
 });

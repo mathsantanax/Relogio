@@ -1,68 +1,81 @@
-const horasInput = document.getElementById('horas');
-const minutosInput = document.getElementById('minutos');
-const segundosInput = document.getElementById('segundos');
+document.addEventListener('DOMContentLoaded', () => {
+    const horasInput = document.getElementById('horas');
+    const minutosInput = document.getElementById('minutos');
+    const segundosInput = document.getElementById('segundos');
 
-const start = document.getElementById('start');
-const reset = document.getElementById('reset');
+    const startPause = document.getElementById('start-pause');
+    const resetar = document.getElementById('reset');
 
-const hora = document.getElementById('hora');
-const minuto = document.getElementById('minuto');
-const segundo = document.getElementById('segundo');
-const milezimo = document.getElementById('milezimo');
+    const hora = document.getElementById('hora');
+    const minuto = document.getElementById('minuto');
+    const segundo = document.getElementById('segundo');
+    const milezimo = document.getElementById('milezimo');
 
-let ativo = false;
-let tempo;
-let tempoRestante;
+    let ativo = false;
+    let timer;
+    let tempoRestante;
+    let tempoInicial;
 
-function updateDisplay(time) {
-    const hours = Math.floor(time / 3600);
-    const minutes = Math.floor((time % 3600) / 60);
-    const seconds = time % 60;
-    hora.textContent(`${String(hours).padStart(2, '0')}`);
-    minuto.textContent(`${String(minutes).padStart(2, '0')}`);
-    segundo.textContent(`${String(seconds).padStart(2, '0')}`);
-    //timerDisplay.textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-}
+    function atualizarDisplay(tempo) {
+        const horas = Math.floor(tempo / 3600000);
+        const minutos = Math.floor((tempo % 3600000) / 60000);
+        const segundos = Math.floor((tempo % 60000) / 1000);
+        const milissegundos = tempo % 1000;
+        hora.textContent = `${String(horas).padStart(2, '0')}`;
+        minuto.textContent = `${String(minutos).padStart(2, '0')}`;
+        segundo.textContent = `${String(segundos).padStart(2, '0')}`;
+        milezimo.textContent = `${String(milissegundos).padStart(3, '0')}`;
+    }
 
-function comercar(){
-    if(!ativo)
-    {
-        const hours = parseInt(horasInput.value) || 0;
-        const minutes = parseInt(minutosInput.value) || 0;
-        const seconds = parseInt(segundosInput.value) || 0;
-        tempoRestante = hours * 3600 + minutes * 60 + seconds;
-        updateDisplay(tempoRestante);
+    function comecar() {
+        const horas = parseInt(horasInput.value) || 0;
+        const minutos = parseInt(minutosInput.value) || 0;
+        const segundos = parseInt(segundosInput.value) || 0;
+        tempoInicial = horas * 3600000 + minutos * 60000 + segundos * 1000;
+        tempoRestante = tempoInicial;
+        atualizarDisplay(tempoRestante);
 
         if (tempoRestante > 0) {
             ativo = true;
             timer = setInterval(() => {
                 if (tempoRestante > 0) {
-                    tempoRestante--;
-                    updateDisplay(tempoRestante);
+                    tempoRestante -= 10; // Atualiza a cada 10 milissegundos
+                    atualizarDisplay(tempoRestante);
                 } else {
                     clearInterval(timer);
                     ativo = false;
+                    startPause.textContent = 'Iniciar';
                 }
-            }, 1000);
+            }, 10); // Atualiza a cada 10 milissegundos
         }
     }
-}
 
-function pauseTimer() {
-    clearInterval(timer);
-    ativo = false;
-}
+    function pausarTimer() {
+        clearInterval(timer);
+        ativo = false;
+    }
 
-function resetTimer() {
-    clearInterval(timer);
-    ativo = false;
-    tempoRestante = 0;
-    updateDisplay(tempoRestante);
-    horasInput.value = '';
-    minutosInput.value = '';
-    segundosInput.value = '';
-}
+    function alternarIniciarPausar() {
+        if (ativo) {
+            pausarTimer();
+            startPause.textContent = 'Iniciar';
+        } else {
+            comecar();
+            startPause.textContent = 'Pausar';
+        }
+    }
 
-start.addEventListener('click', comercar);
-//pauseBtn.addEventListener('click', pauseTimer);
-reset.addEventListener('click', resetTimer);
+    function resetarTimer() {
+        clearInterval(timer);
+        ativo = false;
+        tempoRestante = tempoInicial;
+        atualizarDisplay(0);
+        horasInput.value = '';
+        minutosInput.value = '';
+        segundosInput.value = '';
+        startPause.textContent = 'Iniciar';
+    }
+
+    startPause.addEventListener('click', alternarIniciarPausar);
+    resetar.addEventListener('click', resetarTimer);
+});
