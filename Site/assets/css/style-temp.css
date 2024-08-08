@@ -42,6 +42,7 @@ section{
 }
 
 .display-temp h2{
+    color: gray;
     margin-top: 25px;
     font-size: 100px;
 }
