@@ -1,5 +1,109 @@
-@media only screen and (max-width: 1360px) and (min-width: 855px){
-    body{
-        background-color: blue;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root{
+    --fundo: #1e1e1e;
+    --relogio-principal: #8383835b;
+    --relogios-secundario: #ffffff3f;
+    --color-menu: #b9b9b96b;
+    --font-color-nav: #dcdcdc;
+}
+
+@media only screen and (max-width: 1360px){
+    .relogio-principal{
+        flex-direction: column;
+    }
+    .seta{
+        height: 241px;
+    }
+    .rel-container{
+        width: 450px;
+        height: 241px;
+    }
+    #relogio-digital h1{
+        font-size: 75px;
+    }
+    .card-paises{
+        width: 150px;
+        height: 100px;
+    }
+    .card-paises h2{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 744px){
+    #btn-mobile{
+        font-family: 'Bebas neue', sans-serif;
+        display: block;
+        margin-left: 15px;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+
+    #hamburguer{
+        display: block;
+        width: 20px;
+        border-top: 2px solid;
+        color: var(--font-color-nav);
+    }
+
+    #hamburguer::after, #hamburguer::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: var(--font-color-nav);
+        margin-top: 5px;
+        transition: .3s ease-in-out;
+        position: relative;
+    }
+
+    #nav.active #hamburguer{
+        border-top-color: transparent;
+
+    }
+
+    #nav.active #hamburguer::after{
+        transform: rotate(135deg);
+        top: -7px;
+    }
+
+    #nav.active #hamburguer::before{
+        transform: rotate(-135deg);
+    }
+
+    #nav.active .elementos{
+        display: block;
+        position: absolute;
+        height: calc(30vh);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    .paginas{
+        width: 100%;
+        background: none;
+    }
+
+    .elementos{
+        display: block;
+        position: fixed;
+        height: 0;
+        margin: 0;
+        left: 0;
+        width: 100%;
+        top: 9%;
+        background-color: #5F5F5F;
+        z-index: 1000;
+        transition: .6s ease-in-out;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    .nav-item{
+        background-color: var(--color-menu);
     }
 }

@@ -19,6 +19,9 @@ body{
     background: var(--fundo);
 }
 
+#btn-mobile{
+    display: none;
+}
 
 /* Definindo a nav inicial */
 .menu{
@@ -68,10 +71,6 @@ body{
 .elementos a{
     text-decoration: none;
     color: var(--fundo);
-}
-
-.nav-item{
-    color: var(--font-color-nav);
 }
 
 .imagem-pais{

@@ -6,17 +6,20 @@
     <title>Relógio</title>
 
     <!-- Links stylesheet da pagina inicial -->
-     <link rel="stylesheet" href="../assets/css/main.css">
-     <link rel="stylesheet" href="../assets/css/relogio-analogico.css">
-     <link rel="stylesheet" href="../assets/css/relogio-digital.css">
-     <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="/Site/assets/css/main.css">
+    <link rel="stylesheet" href="/Site/assets/css/relogio-analogico.css">
+    <link rel="stylesheet" href="/Site/assets/css/relogio-digital.css">
+    <link rel="stylesheet" href="/Site/assets/css/responsive.css">
 
     <base href="/Relogio/view/">
 </head>
 <body>
     <header>
         <div class="menu">
-            <div class="paginas">
+            <div class="paginas" id="nav">
+                <button id="btn-mobile"> 
+                    <span id="hamburguer"></span>
+                </button>
                 <ul class="elementos">
                     <li class="nav-item"><a href="index.html">Relógio Mundial</a></li>
                     <li class="nav-item"><a href="Cronometro.html">Cronômetro</a></li>
@@ -33,7 +36,7 @@
                 </div>
                 <div class="relogio-principal">
                     <div id="relogios">
-                        <div class="seta" id="seta-esquerda"><img id="seta-esq" src="../assets/img/left-chevron.png" alt="seta-esquerda"></div>
+                        <div class="seta" id="seta-esquerda"><img id="seta-esq" src="/Site/assets/img/left-chevron.png" alt="seta-esquerda"></div>
                         <div class="container-relogios">
                             <div id="relogio-digital" class="rel-container">
                                 <h1 id="horas-digital"></h1>
@@ -61,7 +64,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="seta" id="seta-direita"><img id="seta-dir" src="../assets/img/right-chevron.png" alt="seta-direita"></div>
+                        <div class="seta" id="seta-direita"><img id="seta-dir" src="/Site/assets/img/right-chevron.png" alt="seta-direita"></div>
                     </div>
                 </div>
                 <div class="data-pais"><h1 id="data-atual"></h1></div>
@@ -71,7 +74,8 @@
             <div class="container-paises">
             </div>
         </section>
-        <script src="../assets/js/Relogio.js"></script>
+        <script src="/Site/assets/js/Relogio.js"></script>
+        <script src="/Site/assets/js/menuHamburguer.js"></script>
     </main>
     <footer>
         <h5>Created by Matheus Santana</h5>
