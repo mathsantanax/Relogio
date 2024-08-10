@@ -1,1 +1,3 @@
-/.vscode
+*/.vscode
+Site/view/index.html
+Site/assets/js/Relogio.js
