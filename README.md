@@ -1,4 +1,4 @@
-# Bem-vindp
+# Bem-vindo
 
 ## relógio digital e analógico
 ## Cronômetro
