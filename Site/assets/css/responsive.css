@@ -103,7 +103,81 @@
         overflow-y: hidden;
     }
 
-    .nav-item{
-        background-color: var(--color-menu);
+    #relogios .container-relogios{
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .container-paises{
+        flex-wrap: wrap;
+    }
+
+    .card-paises{
+        margin-top: 10px;
+        flex: 1 1 200px;
+    }
+    
+    .rel-container{
+        width: calc(75%);
+        height: calc(35vw);
+    }
+
+    #relogio-digital h1{
+        font-size: 10vw;
+    }
+
+    .card-relogio-analogico{
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .numeros{
+        font-size: 80%;
+    }
+
+    .numero {
+        top: 12.8vw;
+        left: 14vw;
+        position: absolute;
+        transform: rotate(calc(30deg * var(--i))) translate(0, -13vw);
+    }
+
+    .hora, .minuto, .segundo {
+        position: absolute;
+        background-color: var(--fundo);
+        transform-origin: center bottom;
+    }
+    
+    .hora {
+        border-radius: 20px;
+        width: 4px;
+        height: 7vw;
+        top: 9vw;
+        left: 15vw;
+    }
+    
+    .minuto {
+        width: 2px;
+        height: 9vw;
+        top: 7vw;
+        left: 15vw;
+    }
+    
+    .segundo {
+        width: 1px;
+        height: 11vw;
+        top: 5vw;
+        left: 15.5vw;
+        background-color: red; /* Segunda mão em vermelho */
+    }
+    
+    .center {
+        width: 6px;
+        height: 6px;
+        background-color: #333;
+        border-radius: 50%;
+        position: absolute;
+        top: 15.5vw;
+        left: 15vw;
     }
 }

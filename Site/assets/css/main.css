@@ -80,8 +80,9 @@ body{
 }
 
 footer{
-    position: absolute;
+    position: fixed;
     bottom: 10px;
     width: 100%;
     text-align: center;
+    color: var(--relogio-principal);
 }
