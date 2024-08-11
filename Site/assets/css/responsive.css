@@ -180,4 +180,17 @@
         top: 15.5vw;
         left: 15vw;
     }
+
+    .timer-display h1, .display-temp h1{
+        font-size: 20vw;
+    }
+    .timer-display h2, .display-temp h2{
+        font-size: 10vw;
+    }
+
+    .buttons, .inputs-temp{
+        flex-wrap: wrap;
+    }
+
+
 }

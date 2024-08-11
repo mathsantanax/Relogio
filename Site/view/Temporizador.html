@@ -8,11 +8,15 @@
     <!-- Links stylesheet da página inicial -->
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/style-temp.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
 <body>
     <header>
         <div class="menu">
-            <div class="paginas">
+            <div class="paginas" id="nav">
+                <button id="btn-mobile"> 
+                    <span id="hamburguer"></span>
+                </button>
                 <ul class="elementos">
                     <li class="nav-item"><a href="index.html">Relógio Mundial</a></li>
                     <li class="nav-item"><a href="Cronometro.html">Cronômetro</a></li>
@@ -37,7 +41,7 @@
                 <h2>:</h2>
                 <h2 id="milezimo">000</h2>
             </div>
-            <div class="botoes">
+            <div class="buttons">
                 <button id="start-pause" class="btn">Iniciar</button>
                 <button id="reset" class="btn">Resetar</button>
             </div>
@@ -47,5 +51,6 @@
         <h5>Created by Matheus Santana</h5>
     </footer>
     <script src="../assets/js/temporizador.js"></script>
+    <script src="../assets/js/menuHamburguer.js"></script>
 </body>
 </html>

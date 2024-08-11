@@ -47,7 +47,7 @@ section{
     font-size: 100px;
 }
 
-.botoes, .inputs-temp{
+.buttons, .inputs-temp{
     display: flex;
     justify-content: space-evenly;
     width: 50%;

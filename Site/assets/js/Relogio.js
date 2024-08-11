@@ -9,13 +9,13 @@ const Zones = {
 };
 
 const imagensPaises = {
-    'America/Sao_Paulo': '/Site/assets/img/sao_paulo.jpg',
-    'America/New_York': '/Site/assets/img/new_york.jpg',
-    'Europe/Lisbon': '/Site/assets/img/lisbon.jpg',
-    'Asia/Tokyo': '/Site/assets/img/tokyo.jpg',
-    'Australia/Sydney': '/Site/assets/img/sydney.jpg',
-    'Europe/Athens': '/Site/assets/img/grecia.jpg',
-    'Europe/Zurich': '/Site/assets/img/suica.jpg'
+    'America/Sao_Paulo': '../assets/img/sao_paulo.jpg',
+    'America/New_York': '../assets/img/new_york.jpg',
+    'Europe/Lisbon': '../assets/img/lisbon.jpg',
+    'Asia/Tokyo': '../assets/img/tokyo.jpg',
+    'Australia/Sydney': '../assets/img/sydney.jpg',
+    'Europe/Athens': '../assets/img/grecia.jpg',
+    'Europe/Zurich': '../assets/img/suica.jpg'
 }
 
 const containerPaises = document.querySelector(".container-paises");
