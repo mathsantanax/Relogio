@@ -53,16 +53,16 @@ Use a navegação no menu para acessar as páginas do Cronômetro e do Temporiza
 
 Você pode adicionar mais zonas de tempo, alterando o objeto Zones no arquivo Relogio.js, e também adicionar novas imagens no objeto ImagensPaises.
 
-const Zones = {
-    'America/Sao_Paulo': 'pt-BR',
-    'America/New_York': 'en-US',
-    // Adicione mais fusos horários aqui
+const Zones = {<br>
+    'America/Sao_Paulo': 'pt-BR',<br>
+    'America/New_York': 'en-US',<br>
+    // Adicione mais fusos horários aqui<br>
 };
 
-const ImagensPaises = {
-    'America/Sao_Paulo': 'assets/img/brazil.jpg',
-    'America/New_York': 'assets/img/usa.jpg',
-    // Adicione mais imagens correspondentes aqui
+const ImagensPaises = {<br>
+    'America/Sao_Paulo': 'assets/img/brazil.jpg',<br>
+    'America/New_York': 'assets/img/usa.jpg',<br>
+    // Adicione mais imagens correspondentes aqui<br>
 };
 
 * **Obs:** Não esqueça de adicionar a fotos do pais em assets/img/
