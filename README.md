@@ -1,19 +1,6 @@
-# Relógio Mundial, Cronômetro e Temporizador
-Este projeto é uma aplicação web que oferece três funcionalidades principais:
+# Bem-vindp
 
-**Relógio Mundial:** Exibe a hora atual de diferentes fusos horários ao redor do mundo. Inclui tanto um relógio digital quanto um analógico, e permite a navegação entre diferentes fusos horários.
-
-**Cronômetro:** Um cronômetro simples que permite iniciar, pausar e resetar o tempo, com precisão de milissegundos.
-
-**Temporizador:** Um temporizador customizável onde o usuário pode definir horas, minutos e segundos, com opções para iniciar, pausar e resetar.
-
-# Funcionalidades
-## Relógio Mundial
-Exibe a hora atual para várias cidades ao redor do mundo.
-Alterna entre diferentes fusos horários usando setas de navegação.
-Exibe tanto um relógio digital quanto um analógico.
-Mostra uma imagem correspondente ao país do fuso horário selecionado.
-
+## relógio digital e analógico
 ## Cronômetro
 Cronômetro com contagem em horas, minutos, segundos e milissegundos.
 Permite iniciar, pausar e resetar o cronômetro.
