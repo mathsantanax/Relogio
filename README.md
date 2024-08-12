@@ -8,6 +8,9 @@ Este projeto é uma aplicação web que oferece três funcionalidades principais
 
 3. **Temporizador:** Um temporizador customizável onde o usuário pode definir horas, minutos e segundos, com opções para iniciar, pausar e resetar.
 
+### Link para pagina
+ * https://mathsantanax.github.io/Relogio/view/index.html
+
 # Funcionalidades
 
 ## Relógio Mundial
