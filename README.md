@@ -1,23 +1,38 @@
-# Bem-vindp
+# Relógio Mundial, Cronômetro e Temporizador
 
-## relógio digital e analógico
+Este projeto é uma aplicação web que oferece três funcionalidades principais:
+
+1. **Relógio Mundial:** Exibe a hora atual de diferentes fusos horários ao redor do mundo. Inclui tanto um relógio digital quanto um analógico, e permite a navegação entre diferentes fusos horários.
+
+2. **Cronômetro:** Um cronômetro simples que permite iniciar, pausar e resetar o tempo, com precisão de milissegundos.
+
+3. **Temporizador:** Um temporizador customizável onde o usuário pode definir horas, minutos e segundos, com opções para iniciar, pausar e resetar.
+
+# Funcionalidades
+
+## Relógio Mundial
+* Exibe a hora atual para várias cidades ao redor do mundo.
+* Alterna entre diferentes fusos horários usando setas de navegação.
+* Exibe tanto um relógio digital quanto um analógico.
+* Mostra uma imagem correspondente ao país do fuso horário selecionado.
+
 ## Cronômetro
-Cronômetro com contagem em horas, minutos, segundos e milissegundos.
+* Cronômetro com contagem em horas, minutos, segundos e milissegundos.
 Permite iniciar, pausar e resetar o cronômetro.
 
 ## Temporizador
-Temporizador configurável pelo usuário para horas, minutos e segundos.
+* Temporizador configurável pelo usuário para horas, minutos e segundos.
 Exibe a contagem regressiva em tempo real.
-Opções para iniciar, pausar e resetar o temporizador.
+* Opções para iniciar, pausar e resetar o temporizador.
 
 # Estrutura do Projeto
 
-**index.html:** Página principal que exibe o Relógio Mundial.
-**Cronometro.html:** Página do cronômetro.
-**Temporizador.html:** Página do temporizador.
-**assets/img/:** Contém as imagens dos países/Cidades.
-**assets/css/:** Contém os arquivos CSS para o estilo das páginas.
-**assets/js/:** Contém os arquivos JavaScript que implementam as funcionalidades.
+* **index.html:** Página principal que exibe o Relógio Mundial.
+* **Cronometro.html:** Página do cronômetro.
+* **Temporizador.html:** Página do temporizador.
+* **assets/img/:** Contém as imagens dos países/Cidades.
+* **assets/css/:** Contém os arquivos CSS para o estilo das páginas.
+* **assets/js/:** Contém os arquivos JavaScript que implementam as funcionalidades.
 
 ### Como Usar
 
@@ -47,7 +62,7 @@ const ImagensPaises = {
     // Adicione mais imagens correspondentes aqui
 };
 
-**Obs:** Não esqueça de adicionar a fotos do pais em assets/img/
+* **Obs:** Não esqueça de adicionar a fotos do pais em assets/img/
 
 
 # Contribuição
@@ -55,11 +70,14 @@ const ImagensPaises = {
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests para melhorias e novas funcionalidades.
 
 
-Tecnologias Utilizadas
-HTML5
-CSS3
-JavaScript
-Créditos
+## Tecnologias Utilizadas
+* HTML5
+* CSS3
+* JavaScript
+* Créditos
+
+### Créditos
+
 Projeto desenvolvido por Matheus Santana.
 
 ## Licença
