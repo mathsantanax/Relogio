@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let tempoRestante;
     let tempoInicial;
 
+    // função para atualizar o display com o tempo
     function atualizarDisplay(tempo) {
         const horas = Math.floor(tempo / 3600000);
         const minutos = Math.floor((tempo % 3600000) / 60000);
@@ -28,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
         milezimo.textContent = `${String(milissegundos).padStart(3, '0')}`;
     }
 
+
+    // função para iniciar o contagem
     function comecar() {
         const horas = parseInt(horasInput.value) || 0;
         const minutos = parseInt(minutosInput.value) || 0;
@@ -52,11 +55,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // função para pausar 
     function pausarTimer() {
         clearInterval(timer);
         ativo = false;
     }
 
+
+    // função para alternar entre iniciar e pausar
     function alternarIniciarPausar() {
         if (ativo) {
             pausarTimer();
@@ -67,6 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+
+    // função para resetrar timer
     function resetarTimer() {
         clearInterval(timer);
         ativo = false;
@@ -79,6 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
         esconderInputs()
     }
 
+
+    // função para esconder os inputs
     function esconderInputs() {
         if (inputTemp.style.display === 'none') {
             inputTemp.style.display = 'flex';

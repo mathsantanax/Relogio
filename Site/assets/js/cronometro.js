@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let timerInterval;
     let running = false;
 
+
+    //função para atualizar o timer e display
     function updateTimer() {
         updatedTime = new Date().getTime();
         difference = updatedTime - startTime;
@@ -37,11 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+
+    // função para pausar
     pauseBtn.addEventListener('click', () => {
         clearInterval(timerInterval);
         running = false;
     });
 
+
+    //função para resetar
     resetBtn.addEventListener('click', () => {
         clearInterval(timerInterval);
         running = false;

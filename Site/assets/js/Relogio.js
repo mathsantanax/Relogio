@@ -6,6 +6,7 @@ const Zones = {
     'Australia/Sydney': 'en-US',
     'Europe/Athens': 'el-GR',
     'Europe/Zurich': 'de-CH',
+    // Adicione mais fusos horários aqui
 };
 
 const imagensPaises = {
@@ -16,6 +17,7 @@ const imagensPaises = {
     'Australia/Sydney': '../assets/img/sydney.jpg',
     'Europe/Athens': '../assets/img/grecia.jpg',
     'Europe/Zurich': '../assets/img/suica.jpg'
+    // Adicione mais imagens correspondentes aqui
 }
 
 const containerPaises = document.querySelector(".container-paises");
